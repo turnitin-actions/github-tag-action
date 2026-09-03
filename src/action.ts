@@ -206,6 +206,7 @@ export default async function main() {
       },
       lastRelease: { gitTag: latestTag.name },
       nextRelease: { gitTag: newTag, version: newVersion },
+      cwd: process.cwd(),
     }
   );
   core.info(`Changelog is ${changelog}.`);

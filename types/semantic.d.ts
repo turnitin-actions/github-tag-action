@@ -46,6 +46,7 @@ declare module '@semantic-release/release-notes-generator' {
       };
       lastRelease: { gitTag: string };
       nextRelease: { gitTag: string; version: string };
+      cwd?: string;
     }
   ): Promise<string>;
 }
