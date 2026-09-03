@@ -1,5 +1,13 @@
 /// <reference types="semver" />
 
+declare module 'conventional-changelog-conventionalcommits' {
+  function conventionalChangelogConventionalcommits(config?: {
+    types?: any[];
+    [key: string]: any;
+  }): Promise<{ parserOpts: any; writerOpts: any; [key: string]: any }>;
+  export = conventionalChangelogConventionalcommits;
+}
+
 declare module '@semantic-release/commit-analyzer' {
   export function analyzeCommits(
     config: {
